@@ -1,0 +1,13 @@
+ - DESCRIÇÂO DAS PASTAS E ARQUIVOS
+
+download -> pasta que contém os arquivos baixados da internet.
+
+files -> pasta que contém os arquivos para teste(não fará parte do projeto - apenas para teste 	 dos arquivos).
+
+selected -> pasta que contém os arquivo(s) selecionados para exibição nos gráficos.
+
+transform -> pasta que contém os arquivos transformados, tratados e limpos.
+
+inep.R -> arquivo fonte do programa.
+
+

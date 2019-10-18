@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558018141199.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3018040924",
+    "id" : "DED5C669",
+    "lastKnownWriteTime" : 1558024943,
+    "last_content_update" : 1558024943525,
+    "path" : "~/carlos/projeto_R/indicadores/download.R",
+    "project_path" : "indicadores/download.R",
+    "properties" : {
+        "cursorPosition" : "3,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

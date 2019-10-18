@@ -1,0 +1,105 @@
+
+getwd()
+
+source("local_settings.R")
+
+
+url <- 'http://portal.inep.gov.br/microdados'
+html <- xml2::read_html(url)
+
+#html <- read_html(url)
+
+# classes <- html %>%
+#   html_nodes('div') %>%
+#   html_nodes("[class='list-download--two-columns-programs anchor__content']")
+#   
+#classes
+# retitando apenas o atribute href dos links 
+# data_anchor_cens_educ_sup <- classes[1] %>%
+#   html_node(".list-download__content") %>%
+#   html_node("ul") %>%
+#   html_nodes("a") %>%
+#   html_attr("href")
+
+get_url_links <- function(url){
+  link <- url
+  
+  html <- xml2::read_html(link)
+  
+  classes <- html %>%
+    html_nodes('div') %>%
+    html_nodes("[class='list-download--two-columns-programs anchor__content']")
+  
+  link <- classes[1] %>% 
+    html_node(".list-download__content") %>%
+    html_node("ul") %>%
+    html_nodes("a") %>%
+    html_attr("href")
+  
+  
+  ano <- classes[1] %>% 
+    html_node(".list-download__content") %>%
+    html_node("ul") %>%
+    html_nodes("a li") %>% 
+    html_text()
+  
+  
+  # Combinando o nao com os links
+  links <- tibble(ano = ano, link = link)
+  #links <- list(ano = ano, link = link)
+  
+  return (links)
+  
+}
+
+links <- get_url_links(url)
+links$ano[23]
+links$link[23]
+
+length_list <- nrow(links)
+length_list
+DOWNLOAD_DIR
+
+i <- 1
+while (i <= length_list) {
+  
+  
+  if(i == 23){
+    print(i)
+    download(links$link[23], dest=sprintf("%s", paste(DOWNLOAD_DIR, 'inep_download',links$ano[23],'inep.zip',sep='/'), mode="wb")) 
+    #unzip ("dataset.zip", exdir = "./")
+    
+  }
+  
+  i <- i + 1
+ 
+}
+
+download(url, dest="dataset.zip", mode="wb") 
+unzip ("dataset.zip", exdir = "./")
+
+
+write.csv(table_agreg_eng, file="tabela_agregados_eng.csv", fileEncoding = "latin1")
+write.csv(table_agreg_sp, file="tabela_agregados_eng_sp.csv", fileEncoding = "latin1")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

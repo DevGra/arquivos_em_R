@@ -1,0 +1,18 @@
+
+# definindo a cor padrão dos avisos de erro e warning
+error <- red $ bold
+warn <- magenta $ underline
+
+getwd()
+#setwd("indicadores")
+
+#DIR <- 'K:/projeto_R/inep'
+#setwd(file.path("K:", "projeto_r", "inep"))
+PATH <- getwd()
+
+DOWNLOAD_DIR <- sprintf("%s", paste(PATH, 'download', sep="/"))
+TRANSFORM_DIR <- sprintf("%s", paste(PATH, 'transform', sep="/"))
+SELECTED_DIR <- sprintf("%s", paste(PATH, 'selected', sep="/"))
+GRAPHIC_DIR <- sprintf("%s", paste(PATH, 'graphic', sep="/"))
+
+

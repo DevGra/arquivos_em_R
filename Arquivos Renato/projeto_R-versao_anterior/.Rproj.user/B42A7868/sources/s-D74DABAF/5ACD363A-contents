@@ -1,0 +1,36 @@
+
+source("local_settings.R")
+getwd()
+
+args <- commandArgs(trailingOnly = TRUE)
+
+collection <- function(name_collection) {
+  comment(collection) <- "função que recebe o nome da collection para download. 
+                          e chama a função específica desta collection para isso"
+  
+  
+  coll <- name_collection
+  
+  if (coll == "inep") {
+    teste <- "Sim"
+    teste
+    
+  }else{
+    teste <- "Não"
+    teste
+  }
+  
+}
+
+tryCatch(
+  
+  {
+    collection(args[1])
+  },
+  
+  error=function(error_message) {
+    message(error("----------------- ERRO ---------------------------------"))
+    message("Passar o nome da collection. Ex: Rscript download.R inep")
+    
+  }
+)

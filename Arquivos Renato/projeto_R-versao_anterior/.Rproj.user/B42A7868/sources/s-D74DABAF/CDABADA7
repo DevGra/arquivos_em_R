@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1558020653467.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CDABADA7",
+    "lastKnownWriteTime" : 1558030893,
+    "last_content_update" : 1558030893343,
+    "path" : "~/carlos/projeto_R/indicadores/download/inep_download/inep_download.R",
+    "project_path" : "indicadores/download/inep_download/inep_download.R",
+    "properties" : {
+        "cursorPosition" : "54,5",
+        "scrollLine" : "44"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
